@@ -1,38 +1,121 @@
-.App {
-  text-align: center;
+.gridCol {
+	height: 1.25em;
+	width: 1.25em;
+	border: 0.5px solid #1e1e1e1e;
+	user-select: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.gridRow {
+	display: flex;
+	user-select: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.right {
+	background-color: #817fef;
+	position: fixed;
+	height: 100vh;
+	width: 25vw;
+	top: 0;
+	right: 0;
+	z-index: 99;
+	padding: 1rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.horiz {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
 }
 
-.App-link {
-  color: #61dafb;
+.container {
+	width: 69vw !important;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin-left: 6vw;
+	background: rgb(244, 244, 244);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input[type="range"] {
+	-webkit-appearance: none;
+	width: 100%;
+	height: 20px;
+	background: #ffffff;
+	outline: none;
+	opacity: 0.7;
+	border-radius: 2rem;
+	-webkit-transition: 0.2s;
+	transition: opacity 0.2s;
+	margin: 0.5rem 0;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	appearance: none;
+	width: 20px;
+	height: 20px;
+	background: #574caf;
+	border-radius: 2rem;
+	cursor: pointer;
+}
+
+input[type="range"]::-moz-range-thumb {
+	width: 25px;
+	height: 25px;
+	background: #574caf;
+	border-radius: 2rem;
+	cursor: pointer;
+}
+
+.style2 {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	background-color: transparent;
+	width: 47px;
+	height: 50px;
+	cursor: pointer;
+	aspect-ratio: 1 !important;
+}
+.style2::-webkit-color-swatch {
+	border-radius: 100%;
+	border: none;
+	border: 1px solid #362f6c;
+}
+.style2::-moz-color-swatch {
+	border-radius: 100%;
+	border: none;
+}
+
+/* NEW */
+
+.nav-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: #817fef;
+	height: 100vh;
+	position: fixed;
+	width: 6vw;
+	z-index: 99;
+}
+
+.icon-button {
+	padding: 0.5rem;
+	transition: background-color 0.3s;
+	border-radius: 50%;
+	margin-bottom: 0.5rem;
+	cursor: pointer;
+}
+
+.color-picker {
+	padding-top: 0.5rem;
+}
+
+button {
+	border: none;
 }
